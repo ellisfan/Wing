@@ -1,4 +1,5 @@
 <?php
+if ( ! defined( 'ABSPATH' ) ) { exit; }
 /**
  * Theme Update Checker Library 1.2
  * https://w-shadow.com/

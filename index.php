@@ -1,4 +1,4 @@
-<?php get_header(); ?>
+<?php if ( ! defined( 'ABSPATH' ) ) { exit; } get_header(); ?>
     <!-- 文章列表 -->
     <div class="article-list">
 		<?php if ( have_posts() ) {

@@ -1,6 +1,9 @@
-<?php if ( post_password_required() || ! comments_open() ) {
+<?php 
+if ( ! defined( 'ABSPATH' ) ) { exit; }
+if ( post_password_required() || ! comments_open() ) {
     return;
-} ?>
+}
+?>
 
 <section id="comments"></section>
 <script>

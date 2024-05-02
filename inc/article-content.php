@@ -1,3 +1,4 @@
+<?php if ( ! defined( 'ABSPATH' ) ) { exit; } ?>
 <!-- Content -->
 <article class="article" itemscope="itemscope" itemtype="http://schema.org/Article">
     <?php

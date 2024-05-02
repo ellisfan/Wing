@@ -1,3 +1,4 @@
+<?php if ( ! defined( 'ABSPATH' ) ) { exit; } ?>
 <header class="article-header">
     <h1 itemprop="headline" class="article-title h2 mb-2"><?php the_title(); ?></h1>
     <ul class="article-info d-flex text-gray reset-ul m-0">

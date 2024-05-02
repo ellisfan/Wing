@@ -1,4 +1,6 @@
 <?php
+if ( ! defined( 'ABSPATH' ) ) { exit; }
+
 // 主题设置选项
 function theme_customize_register( $wp_customize ) {
     $category_checkbox = "";
@@ -317,6 +319,61 @@ function theme_customize_register( $wp_customize ) {
                         'label'       => '认证读者',
                         'description' => '填入邮箱地址，每行一条',
                         'type'        => 'textarea',
+                    ]
+                ],
+            ]
+        ],
+        [
+            "id"       => "biji_opt",
+            "args"     => [
+                'title'       => '优化设置',
+                'description' => $style,
+                'priority'    => 103,
+            ],
+            "settings" => [
+                [
+                    "id"      => "biji_opt_remove_admin_bar",
+                    "setting" => [ "default" => true ],
+                    "control" => [
+                        'label' => '移除Admin bar',
+                        'description' => '此选项可以帮助你全局移除Admin Bar工具栏，所有人包括管理员都看不到。',
+                        'type'  => 'checkbox',
+                    ]
+                ],
+                [
+                    "id"      => "biji_opt_disable_texturize",
+                    "setting" => [ "default" => true ],
+                    "control" => [
+                        'label' => '禁用字符转码',
+                        'description' => '禁用字符换成格式化的 HTML 实体功能。',
+                        'type'  => 'checkbox',
+                    ]
+                ],
+                [
+                    "id"      => "biji_opt_remove_head_links",
+                    "setting" => [ "default" => true ],
+                    "control" => [
+                        'label' => '移除头部代码',
+                        'description' => 'WordPress会在页面的头部输出了一些link和meta标签代码，这些代码没什么作用，并且存在安全隐患，建议移除WordPress页面头部中无关紧要的代码。',
+                        'type'  => 'checkbox',
+                    ]
+                ],
+                [
+                    "id"      => "biji_opt_remove_help_tabs",
+                    "setting" => [ "default" => true ],
+                    "control" => [
+                        'label' => '移除帮助按钮',
+                        'description' => '移除后台界面右上角的帮助',
+                        'type'  => 'checkbox',
+                    ]
+                ],
+                [
+                    "id"      => "biji_opt_no_admin",
+                    "setting" => [ "default" => true ],
+                    "control" => [
+                        'label' => '禁用 admin',
+                        'description' => '禁止使用 admin 用户名尝试登录 WordPress',
+                        'type'  => 'checkbox',
                     ]
                 ],
             ]

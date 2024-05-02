@@ -1,3 +1,4 @@
+<?php if ( ! defined( 'ABSPATH' ) ) { exit; } ?>
 </div><!-- content -->
 </main><!-- main -->
 </section><!-- core -->
@@ -5,8 +6,7 @@
 <footer id="footer">
     <div class="d-flex flex-center justify-between flex-wrap">
         <div class='left'>
-            <span>&copy; <?= date( 'Y' ) ?> <a
-                        href="<?= get_bloginfo( 'url' ) ?>"><?= get_bloginfo( 'name' ) ?></a></span>
+            <span>&copy; <?= date( 'Y' ) ?> <a href="<?= get_bloginfo( 'url' ) ?>"><?= get_bloginfo( 'name' ) ?></a></span>
         </div>
         <div class='right'>
             <span>Theme by <a class="theme-name" href="https://biji.io" target="_blank"><?= THEME_NAME ?></a></span>
@@ -23,32 +23,11 @@
     </div>
 
     <div class="scroll-tools mr-2">
-        <div class="dropdown" hover-show perspective>
+        <div class="dropdown">
             <a class="btn btn-link btn-action uni-bg bg-blur uni-shadow dropdown-toggle flex-center"
-               href="javascript:void(0);" tabindex="0">
-                <i class="czs-clothes-l"></i>
+               href="/wp-admin" target="_blank" tabindex="0">
+                <i class="czs-fingerprint-l"></i>
             </a>
-            <ul class="menu menu-left mode-switch uni-card uni-bg bg-blur uni-shadow text-center" @click="toggleSkinMode">
-                <li v-for="item of modeList" class="menu-item">
-                    <a class="flex-center" :data-mode="item.mode" href="javascript:void(0);">
-                        <i :class="[item.icon, 'mr-1']"></i>{{ item.name }}
-                    </a>
-                </li>
-            </ul>
-        </div>
-        <div style="height: 0.4rem;"></div>
-        <div class="dropdown" hover-show perspective>
-            <a class="btn btn-link btn-action uni-bg bg-blur uni-shadow dropdown-toggle flex-center"
-               href="javascript:void(0);" tabindex="0">
-                <i class="czs-earth"></i>
-            </a>
-            <ul class="menu menu-left mode-switch uni-card uni-bg bg-blur uni-shadow" @click="toggleLanguage">
-                <li v-for="item of langList" class="menu-item">
-                    <a class="flex-center" :data-mode="item.mode" href="javascript:void(0);">
-                        <i :class="[item.icon, 'mr-1']"></i>{{ item.name }}
-                    </a>
-                </li>
-            </ul>
         </div>
         <div style="height: 0.4rem;"></div>
         <a class="scroll-top btn btn-link btn-action uni-bg bg-blur uni-shadow flex-center"
@@ -82,6 +61,15 @@
 </script>
 </div>
 <?php wp_footer(); ?>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?92ba59e5187e2c9598faab7f5f25b51e";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
 <!--网站效率：<?php timer_stop( 4 ); ?>秒内查询了<?= get_num_queries(); ?>次数据库-->
 </body>
 

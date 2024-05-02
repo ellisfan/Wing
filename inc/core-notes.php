@@ -1,4 +1,6 @@
 <?php
+if ( ! defined( 'ABSPATH' ) ) { exit; }
+
 function note_custom_init() {
 	// 注册Note类型
 	register_post_type( 'note', [

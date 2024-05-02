@@ -1,4 +1,6 @@
 <?php
+if ( ! defined( 'ABSPATH' ) ) { exit; }
+
 // 校验nonce，防止滥用接口
 function check_nonce() {
     $nonce = $_REQUEST['_wpnonce'] ?? ( $_SERVER['HTTP_X_WP_NONCE'] ?? '' );

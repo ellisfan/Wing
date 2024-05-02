@@ -1,4 +1,6 @@
 <?php
+if ( ! defined( 'ABSPATH' ) ) { exit; }
+
 include_once( 'core-rest.php' ); // AJAX接口
 include_once( 'core-notes.php' ); // 笔记
 include_once( 'core-settings.php' ); // 主题设置

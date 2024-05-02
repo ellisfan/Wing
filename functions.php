@@ -1,4 +1,5 @@
 <?php
+if ( ! defined( 'ABSPATH' ) ) { exit; }
 ini_set( 'display_errors', 1 );
 if ( version_compare( $GLOBALS['wp_version'], '5.9', '<' ) ) {
     wp_die( 'Please upgrade to version 5.9 or higher' );
@@ -16,6 +17,8 @@ if ( ! defined( 'THEME_VERSION' ) ) {
 include_once( 'inc/core.php' ); // 核心
 
 include_once( 'inc/base-customized.php' ); // 定制优化
+
+include_once( 'inc/theme-customized.php' ); // 二次定制
 
 // 挂载脚本
 function biji_enqueue_scripts() {
@@ -51,7 +54,7 @@ function biji_enqueue_scripts() {
         'rest'   => rest_url(),
         'nonce'  => wp_create_nonce( 'wp_rest' ),
         'pjax'   => get_theme_mod( 'biji_setting_pjax', true ),
-        'lang'   => get_locale(),
+        'lang'   => 'en',
     ] );
 }
 

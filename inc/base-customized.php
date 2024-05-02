@@ -1,4 +1,5 @@
 <?php
+if ( ! defined( 'ABSPATH' ) ) { exit; }
 // 移除非必要的头部文件
 remove_action( 'wp_head', 'feed_links_extra', 3 ); // 额外的feed,例如category, tag页
 remove_action( 'wp_head', 'wp_generator' ); // 隐藏wordpress版本
